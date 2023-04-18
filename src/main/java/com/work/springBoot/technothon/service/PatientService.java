@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public interface PatientService {
 
 
-    ResponseDto getAllPatients( );
+    ResponseDto getAllPatients(String queryLevel );
 
 
 }

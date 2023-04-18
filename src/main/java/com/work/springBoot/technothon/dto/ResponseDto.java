@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Component;
 
+import com.work.springBoot.technothon.entity.Patients;
+
 import lombok.Data;
 
 //@Component
@@ -11,16 +13,16 @@ import lombok.Data;
 @Data
 public class ResponseDto {
 	
-	private List<PatientDto> dto;
+	private List<Patients> dto;
 	private int urgentCount;
 	private int highCount;
 	private int mediumCount;
 	private int lowCount;
 	
-	public List<PatientDto> getDto() {
+	public List<Patients> getDto() {
 		return dto;
 	}
-	public void setDto(List<PatientDto> dto) {
+	public void setDto(List<Patients> dto) {
 		this.dto = dto;
 	}
 	public int getUrgentCount() {

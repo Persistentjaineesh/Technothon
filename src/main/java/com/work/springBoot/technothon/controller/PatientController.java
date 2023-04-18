@@ -27,11 +27,19 @@ public class PatientController {
     // Build Get All Users REST API
     // http://localhost:8080/Patients
     @GetMapping("/patients")
-    public ResponseEntity<ResponseDto> getAllPatients( ){
+//    public ResponseEntity<ResponseDto> getAllPatients( ){
+//        //ek query parameter rhega Level
+////         ""=sb list bhejna
+////         "risk"=risk EQUATIOn for risk anf further
+//        ResponseDto output = patientService.getAllPatients( );
+//        return new ResponseEntity<>(output, HttpStatus.OK);
+//    }
+    
+    public ResponseEntity<ResponseDto> getAllPatients(@RequestParam (required=false) String decision  ){
         //ek query parameter rhega Level
 //         ""=sb list bhejna
 //         "risk"=risk EQUATIOn for risk anf further
-        ResponseDto output = patientService.getAllPatients( );
+        ResponseDto output = patientService.getAllPatients(decision );
         return new ResponseEntity<>(output, HttpStatus.OK);
     }
 
