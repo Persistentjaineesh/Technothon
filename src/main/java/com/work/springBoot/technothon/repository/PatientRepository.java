@@ -1,12 +1,14 @@
 package com.work.springBoot.technothon.repository;
 
  
+import com.work.springBoot.technothon.dto.PatientDto;
 import com.work.springBoot.technothon.entity.Patient;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface PatientRepository extends JpaRepository<Patient, Long> {
 
     @Query(nativeQuery = true, value = "select \r\n"
@@ -55,6 +57,6 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
     		+ "technothon.admissions)\r\n"
     		+ "GROUP BY SUBJECT_ID) as emergencyTable\r\n"
     		+ "on p.SUBJECT_ID=emergencyTable.SUBJECT_ID")
-    List<Patient> listOfPatient();
+    List<PatientDto> listOfPatient();
 
 }

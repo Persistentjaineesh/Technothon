@@ -5,6 +5,8 @@ import com.work.springBoot.technothon.entity.Patient;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 public interface PatientService {
 
 

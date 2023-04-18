@@ -8,6 +8,8 @@ import com.work.springBoot.technothon.entity.Patient;
 import com.work.springBoot.technothon.repository.PatientRepository;
 import com.work.springBoot.technothon.service.PatientService;
 import org.apache.logging.log4j.util.Strings;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -19,8 +21,11 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor
 public class PatientServiceImpl implements PatientService {
-    
+    @Autowired
     private PatientRepository patientRepository;
+    
+    
+    ResponseDto responseDto= new ResponseDto();
 
     @Override
     public ResponseDto getAllPatients( ) {
@@ -28,11 +33,11 @@ public class PatientServiceImpl implements PatientService {
 //               moderatePatieent
 //               hoghParient
 //               lowPatient
-        List<Patient> patientList=patientRepository.listOfPatient();
-        System.out.println("patientList:-"+ patientList );
+        List<PatientDto> input=patientRepository.listOfPatient();
+        System.out.println("patientList:-"+ input );
         
         
-        List<PatientDto>input= new ArrayList<PatientDto>();;
+//        List<PatientDto>input= new ArrayList<PatientDto>();;
         List<PatientDto>UrgentList= new ArrayList<PatientDto>();;
         List<PatientDto>HighList= new ArrayList<PatientDto>();;
         List<PatientDto>MediumList= new ArrayList<PatientDto>();;
@@ -54,14 +59,15 @@ public class PatientServiceImpl implements PatientService {
         }
 
         }
-        ResponseDto responseDto;
+        
+        
          responseDto.setUrgentCount( UrgentList.size());
          responseDto.setHighCount( HighList.size());
          responseDto.setMediumCount(MediumList.size());
          responseDto.setLowCount(LowList.size());
 
 //        if(queryLevel==null){
-       responseDto.setPatientDto(input);
+       responseDto.setDto(input);
 //         
 //        }
 //        else if(queryLevel.equalsIgnoreCase("Urgent")){
