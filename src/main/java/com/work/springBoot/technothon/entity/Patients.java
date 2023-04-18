@@ -1,6 +1,5 @@
 package com.work.springBoot.technothon.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -17,64 +16,64 @@ import javax.persistence.*;
 @Table(name = "patients")
 public class Patients {
 
-	@Column(name="ROW_ID")
-    private int rowId;
-	
-    @Id
-    @Column(name="SUBJECT_ID")
-    private int subjectId;
+	@Column(name = "ROW_ID")
+	private int rowId;
 
-    @Column(name="GENDER")
-    private String gender;
-    
-    @Column(name="DOB")
-    private String dob;
-    
-    @Column(name="DOD")
-    private String dod;
-    
-    @Column(name="DOD_HOSP")
-    private String dodHosp;
-    
-    @Column(name="DOD_SSN")
-    private String dodSsn;
-    
-    @Column(name="EXPIRE_FLAG")
-    private int expireFlag;
-    
-    @Column(name="INSURANCE")
-    private String insurance;
-    
-    @Column(name="LANGUAGE")
-    private String language;
-    
-    @Column(name="RELIGION")
-    private String religion;
-    
-    @Column(name="MARITAL_STATUS")
-    private String maritalStatus;
-    
-    @Column(name="ETHNICITY")
-    private String ethnicity;
-    
-    @Column(name="DIAGNOSIS")
-    private String diagnosis;
-    
-    @Column(name="HADM_ID")
-    private int hadmId;
-    
-    @Column(name="ADMISSION_TYPE")
-    private String admissionType;
-    
-    @Column(name="critical_count")
-    private Double criticalCount;
-    
-    @Column(name="emergency_count")
-    private Double emergencyCount;
-    
-    private Double riskCount;
-    
-    public int getRowId() {
+	@Id
+	@Column(name = "SUBJECT_ID")
+	private int subjectId;
+
+	@Column(name = "GENDER")
+	private String gender;
+
+	@Column(name = "DOB")
+	private String dob;
+
+	@Column(name = "DOD")
+	private String dod;
+
+	@Column(name = "DOD_HOSP")
+	private String dodHosp;
+
+	@Column(name = "DOD_SSN")
+	private String dodSsn;
+
+	@Column(name = "EXPIRE_FLAG")
+	private int expireFlag;
+
+	@Column(name = "INSURANCE")
+	private String insurance;
+
+	@Column(name = "LANGUAGE")
+	private String language;
+
+	@Column(name = "RELIGION")
+	private String religion;
+
+	@Column(name = "MARITAL_STATUS")
+	private String maritalStatus;
+
+	@Column(name = "ETHNICITY")
+	private String ethnicity;
+
+	@Column(name = "DIAGNOSIS")
+	private String diagnosis;
+
+	@Column(name = "HADM_ID")
+	private int hadmId;
+
+	@Column(name = "ADMISSION_TYPE")
+	private String admissionType;
+
+	@Column(name = "critical_count")
+	private Double criticalCount;
+
+	@Column(name = "emergency_count")
+	private Double emergencyCount;
+
+	private Double riskCount;
+
+	public int getRowId() {
 		return rowId;
 	}
 
@@ -225,7 +224,5 @@ public class Patients {
 	public void setEmergencyCount(Double emergencyCount) {
 		this.emergencyCount = emergencyCount;
 	}
-
-	
 
 }
