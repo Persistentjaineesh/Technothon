@@ -22,10 +22,4 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
             "            GROUP BY SUBJECT_ID;")
     List<Patient> listOfPatientEmergencyCount();
 
-
-//    @Query(nativeQuery=true,value="SELECT SUBJECT_ID, COUNT(SUBJECT_ID) " +
-//            "FROM technothon.diagnoses_icd d inner join technothon.chronic_code cc on d.ICD9_CODE=cc.code \n" +
-//            "WHERE SUBJECT_ID IN (SELECT DISTINCT(SUBJECT_ID)FROM technothon.diagnoses_icd );")
-//    List<ChronicData>listOfChronic();
-
 }

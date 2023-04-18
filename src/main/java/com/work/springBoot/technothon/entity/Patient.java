@@ -20,7 +20,7 @@ public class Patient {
     private String subjectId;
 
     @Column(name="emergency_count")
-    private String emergency_count;
+    private int eCount;
 
 //    @Id
 // @GeneratedValue(strategy = GenerationType.IDENTITY)
