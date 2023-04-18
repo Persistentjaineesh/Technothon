@@ -15,48 +15,29 @@ import javax.persistence.*;
 @Table(name = "patient")
 public class Patient {
 
+	@Column(name="ROW_ID")
+    private int rowId;
+	
     @Id
     @Column(name="SUBJECT_ID")
-    private String subjectId;
+    private int subjectId;
 
-    @Column(name="emergency_count")
-    private int eCount;
-
-//    @Id
-// @GeneratedValue(strategy = GenerationType.IDENTITY)
-//
-// private Long SUBJECT_ID;
-//
-// @Column(nullable = false)
-//
-// private String GENDER;
-
-// @Column(nullable = false)
-//
-// private String DOB;
-//
-//  @Column(nullable = false)
-//
-// private String DOD;
-//
-// @Column(nullable = false)
-//
-// private String DOD_HOSP;
-//
-// @Column(nullable = false)
-//
-// private String DOD_SSN;
-//  @Column(nullable = false)
-//    private String EXPIRE_FLAG;
-//
-//    private String HADM_ID;
-//  @Column(nullable = false)
-// private String INSURANCE;
-// @Column(nullable = false)
-// private String LANGUAGE;
-// @Column(nullable = false)
-//  private String RELIGION;
-//  @Column(nullable = false)
-// private String RISK_SCORE;
+    @Column(name="GENDER")
+    private String gender;
+    
+    @Column(name="DOB")
+    private String dob;
+    
+    @Column(name="DOD")
+    private String dod;
+    
+    @Column(name="DOD_HOSP")
+    private String dodHosp;
+    
+    @Column(name="DOD_SSN")
+    private String dodSsn;
+    
+    @Column(name="EXPIRE_FLAG")
+    private int expireFlag;
 
 }

@@ -1,5 +1,6 @@
 package com.work.springBoot.technothon.entity;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -11,14 +12,16 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Table(name = "chronic_code")
+public class ChronicCode {
+	
+	  @Id
+	    @Column(name="code")
+	    private String code;
 
-public class ChronicData {
-
-    @Id
-    @Column(name="SUBJECT_ID")
-    private String subjectId;
-
-    @Column(name="chronic_code")
-    private String chronicCode;
-
+     
+    @Column(name="Disease")
+    private String disease;
+    
+  
 }
