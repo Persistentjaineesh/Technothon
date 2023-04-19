@@ -14,7 +14,7 @@ public interface PatientRepository extends JpaRepository<Patients, Long> {
 	@Query (nativeQuery = true, value = "select DISTINCT ( concat( SUBJECT_ID,Disease)) as subjectDisease,SUBJECT_ID,Disease, ROW_ID,GENDER, DOB, DOD, DOD_HOSP, \r\n"
 			+ "DOD_SSN, EXPIRE_FLAG, RELIGION, \r\n"
 			+ "LANGUAGE, MARITAL_STATUS, ETHNICITY, DIAGNOSIS, \r\n"
-			+ "INSURANCE, ADMISSION_TYPE, HADM_ID, critical_count, emergency_count, \r\n"
+			+ "INSURANCE, ADMISSION_TYPE,ADMITTIME,age, HADM_ID, critical_count, emergency_count, \r\n"
 			+ "ICD9_CODE, risk_count\r\n"
 			+ "from patients\r\n"
 			+ "group by subjectDisease")

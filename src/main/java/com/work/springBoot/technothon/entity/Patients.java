@@ -77,6 +77,28 @@ public class Patients {
 	@Column(name = "Disease")
 	private String disease;
 	
+	@Column(name = "ADMITTIME")
+	private String admitTime;
+	
+	@Column(name = "AGE")
+	private long age;
+	
+
+	public long getAge() {
+		return age;
+	}
+
+	public void setAge(long age) {
+		this.age = age;
+	}
+
+	public String getAdmitTime() {
+		return admitTime;
+	}
+
+	public void setAdmitTime(String admitTime) {
+		this.admitTime = admitTime;
+	}
 
 	public Double getIcdCode() {
 		return icdCode;

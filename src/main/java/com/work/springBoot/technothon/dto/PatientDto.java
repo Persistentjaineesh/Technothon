@@ -44,6 +44,16 @@ public class PatientDto {
 	private String icdCode;
 	
 	private String disease;
+	
+	private String admitTime;
+
+	public String getAdmitTime() {
+		return admitTime;
+	}
+
+	public void setAdmitTime(String admitTime) {
+		this.admitTime = admitTime;
+	}
 
 	public int getSubjectId() {
 		return subjectId;

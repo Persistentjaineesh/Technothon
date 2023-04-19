@@ -1,12 +1,17 @@
 package com.work.springBoot.technothon.service.impl;
 
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.work.springBoot.technothon.dto.DiseaseCountDto;
+import com.work.springBoot.technothon.dto.PatientDto;
 import com.work.springBoot.technothon.dto.ResponseDto;
 import com.work.springBoot.technothon.entity.Patients;
 import com.work.springBoot.technothon.repository.PatientRepository;
@@ -37,8 +42,23 @@ public class PatientServiceImpl implements PatientService {
 		;
 		List<Patients> LowList = new ArrayList<Patients>();
 		;
+		SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
 
 		for (Patients x : input) {
+			Date firstDate=new Date(),secondDate=new Date();
+			try {
+			 firstDate = sdf.parse(x.getDob()); 
+			 secondDate = sdf.parse(x.getAdmitTime());
+			}catch(ParseException e){
+				System.out.println("Parse Error");
+			}
+			
+			long diffInMillies = Math.abs(secondDate.getTime() - firstDate.getTime());
+			long diff = (TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS))/365;
+			
+			x.setAge(diff);
+			
+			
 			x.setRiskCount(x.getEmergencyCount() * 0.5 + x.getCriticalCount() * 0.5);
 			if (x.getRiskCount() > 3) {
 				UrgentList.add(x);
@@ -85,6 +105,11 @@ public class PatientServiceImpl implements PatientService {
 //		 input = patientRepository.fetchDiseaseCount();
 //		
 //		return input;
+//	}
+//	public List<PatientDto> ageCalculator(){
+//		
+//		
+//		
 //	}
 	
 	 
