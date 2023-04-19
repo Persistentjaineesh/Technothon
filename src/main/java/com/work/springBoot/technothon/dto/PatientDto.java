@@ -41,9 +41,9 @@ public class PatientDto {
 
 	private double riskNumber;
 	
-//	private String icdCode;
-//	
-//	private String disease;
+	private String icdCode;
+	
+	private String disease;
 
 	public int getSubjectId() {
 		return subjectId;
@@ -185,21 +185,21 @@ public class PatientDto {
 		return riskNumber;
 	}
 
-//	public String getIcdCode() {
-//		return icdCode;
-//	}
-//
-//	public void setIcdCode(String icdCode) {
-//		this.icdCode = icdCode;
-//	}
-//
-//	public String getDisease() {
-//		return disease;
-//	}
-//
-//	public void setDisease(String disease) {
-//		this.disease = disease;
-//	}
+	public String getIcdCode() {
+		return icdCode;
+	}
+
+	public void setIcdCode(String icdCode) {
+		this.icdCode = icdCode;
+	}
+
+	public String getDisease() {
+		return disease;
+	}
+
+	public void setDisease(String disease) {
+		this.disease = disease;
+	}
 
 	public void setRiskNumber(double riskNumber) {
 		this.riskNumber = riskNumber;

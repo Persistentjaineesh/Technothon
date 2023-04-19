@@ -71,28 +71,28 @@ public class Patients {
 	@Column(name = "emergency_count")
 	private Double emergencyCount;
 	
-//	@Column(name = "ICD9_CODE")
-//	private Double icdCode;
-//	
-//	@Column(name = "Disease")
-//	private Double disease;
+	@Column(name = "ICD9_CODE")
+	private Double icdCode;
+	
+	@Column(name = "Disease")
+	private String disease;
 	
 
-//	public Double getIcdCode() {
-//		return icdCode;
-//	}
-//
-//	public void setIcdCode(Double icdCode) {
-//		this.icdCode = icdCode;
-//	}
-//
-//	public Double getDisease() {
-//		return disease;
-//	}
-//
-//	public void setDisease(Double disease) {
-//		this.disease = disease;
-//	}
+	public Double getIcdCode() {
+		return icdCode;
+	}
+
+	public void setIcdCode(Double icdCode) {
+		this.icdCode = icdCode;
+	}
+
+	public String getDisease() {
+		return disease;
+	}
+
+	public void setDisease(String disease) {
+		this.disease = disease;
+	}
 
 	private Double riskCount;
 
