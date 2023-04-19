@@ -40,6 +40,10 @@ public class PatientDto {
 	private int emergencyCount;
 
 	private double riskNumber;
+	
+//	private String icdCode;
+//	
+//	private String disease;
 
 	public int getSubjectId() {
 		return subjectId;
@@ -180,6 +184,22 @@ public class PatientDto {
 	public double getRiskNumber() {
 		return riskNumber;
 	}
+
+//	public String getIcdCode() {
+//		return icdCode;
+//	}
+//
+//	public void setIcdCode(String icdCode) {
+//		this.icdCode = icdCode;
+//	}
+//
+//	public String getDisease() {
+//		return disease;
+//	}
+//
+//	public void setDisease(String disease) {
+//		this.disease = disease;
+//	}
 
 	public void setRiskNumber(double riskNumber) {
 		this.riskNumber = riskNumber;

@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.work.springBoot.technothon.dto.DiseaseCountDto;
 import com.work.springBoot.technothon.dto.ResponseDto;
 import com.work.springBoot.technothon.entity.Patients;
 import com.work.springBoot.technothon.repository.PatientRepository;
@@ -74,5 +75,17 @@ public class PatientServiceImpl implements PatientService {
 		System.out.println(responseDto);
 		return responseDto;
 	}
+
+	@Override
+	public List<DiseaseCountDto> getDiseaseCountService() {
+		// TODO Auto-generated method stub
+		List<DiseaseCountDto> input = new ArrayList<DiseaseCountDto>();
+	
+		 input = patientRepository.fetchDiseaseCount();
+		
+		return input;
+	}
+	
+	 
 
 }
