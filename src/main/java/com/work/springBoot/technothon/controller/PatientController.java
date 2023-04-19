@@ -36,14 +36,14 @@ public class PatientController {
 		return new ResponseEntity<>(output, HttpStatus.OK);
 	}
 	
-	@GetMapping("/diseaseCount")
-	
-	public ResponseEntity<List<DiseaseCountDto>> getDiseaseCount(){
-		
-		// http://localhost:8080/diseaseCount
-		List<DiseaseCountDto> output = patientService.getDiseaseCountService();
-				return new ResponseEntity<>(output, HttpStatus.OK);
-		
-	}
+//	@GetMapping("/diseaseCount")
+//	
+//	public ResponseEntity<List<DiseaseCountDto>> getDiseaseCount(){
+//		
+//		// http://localhost:8080/diseaseCount
+//		List<DiseaseCountDto> output = patientService.getDiseaseCountService();
+//				return new ResponseEntity<>(output, HttpStatus.OK);
+//		
+//	}
 
 }

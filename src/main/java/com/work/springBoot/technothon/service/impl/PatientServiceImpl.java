@@ -25,7 +25,8 @@ public class PatientServiceImpl implements PatientService {
 	@Override
 	public ResponseDto getAllPatients(String queryLevel) {
 
-		List<Patients> input = patientRepository.findAll();
+//		List<Patients> input = patientRepository.findAll();
+		List<Patients> input = patientRepository.fetchUniqueRows();
 		System.out.println("patientList:-" + input);
 
 		List<Patients> UrgentList = new ArrayList<Patients>();
@@ -76,15 +77,15 @@ public class PatientServiceImpl implements PatientService {
 		return responseDto;
 	}
 
-	@Override
-	public List<DiseaseCountDto> getDiseaseCountService() {
-		// TODO Auto-generated method stub
-		List<DiseaseCountDto> input = new ArrayList<DiseaseCountDto>();
-	
-		 input = patientRepository.fetchDiseaseCount();
-		
-		return input;
-	}
+//	@Override
+//	public List<DiseaseCountDto> getDiseaseCountService() {
+//		// TODO Auto-generated method stub
+//		List<DiseaseCountDto> input = new ArrayList<DiseaseCountDto>();
+//	
+//		 input = patientRepository.fetchDiseaseCount();
+//		
+//		return input;
+//	}
 	
 	 
 

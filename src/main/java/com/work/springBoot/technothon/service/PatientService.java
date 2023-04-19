@@ -9,6 +9,6 @@ public interface PatientService {
 
 	ResponseDto getAllPatients(String queryLevel);
 	
-	List<DiseaseCountDto> getDiseaseCountService();
+//	List<DiseaseCountDto> getDiseaseCountService();
 
 }
